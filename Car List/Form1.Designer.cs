@@ -30,15 +30,16 @@ namespace Car_List
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.makeTextBox = new System.Windows.Forms.TextBox();
-            this.yearTextBox = new System.Windows.Forms.TextBox();
             this.mileageTextBox = new System.Windows.Forms.TextBox();
+            this.yearTextBox = new System.Windows.Forms.TextBox();
+            this.makeTextBox = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.addButton = new System.Windows.Forms.Button();
             this.carListBox = new System.Windows.Forms.ListBox();
             this.displayButton = new System.Windows.Forms.Button();
+            this.exitButton = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,23 +58,26 @@ namespace Car_List
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Informacje o pojeździe";
             // 
-            // label1
+            // mileageTextBox
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(58, 72);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(36, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Model";
+            this.mileageTextBox.Location = new System.Drawing.Point(169, 146);
+            this.mileageTextBox.Name = "mileageTextBox";
+            this.mileageTextBox.Size = new System.Drawing.Size(100, 20);
+            this.mileageTextBox.TabIndex = 5;
             // 
-            // label2
+            // yearTextBox
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(21, 104);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(73, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Rok produkcji";
+            this.yearTextBox.Location = new System.Drawing.Point(169, 104);
+            this.yearTextBox.Name = "yearTextBox";
+            this.yearTextBox.Size = new System.Drawing.Size(100, 20);
+            this.yearTextBox.TabIndex = 4;
+            // 
+            // makeTextBox
+            // 
+            this.makeTextBox.Location = new System.Drawing.Point(169, 72);
+            this.makeTextBox.Name = "makeTextBox";
+            this.makeTextBox.Size = new System.Drawing.Size(100, 20);
+            this.makeTextBox.TabIndex = 3;
             // 
             // label3
             // 
@@ -84,26 +88,23 @@ namespace Car_List
             this.label3.TabIndex = 2;
             this.label3.Text = "Przebieg";
             // 
-            // makeTextBox
+            // label2
             // 
-            this.makeTextBox.Location = new System.Drawing.Point(169, 72);
-            this.makeTextBox.Name = "makeTextBox";
-            this.makeTextBox.Size = new System.Drawing.Size(100, 20);
-            this.makeTextBox.TabIndex = 3;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(21, 104);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(73, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Rok produkcji";
             // 
-            // yearTextBox
+            // label1
             // 
-            this.yearTextBox.Location = new System.Drawing.Point(169, 104);
-            this.yearTextBox.Name = "yearTextBox";
-            this.yearTextBox.Size = new System.Drawing.Size(100, 20);
-            this.yearTextBox.TabIndex = 4;
-            // 
-            // mileageTextBox
-            // 
-            this.mileageTextBox.Location = new System.Drawing.Point(169, 146);
-            this.mileageTextBox.Name = "mileageTextBox";
-            this.mileageTextBox.Size = new System.Drawing.Size(100, 20);
-            this.mileageTextBox.TabIndex = 5;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(58, 72);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(36, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Model";
             // 
             // addButton
             // 
@@ -133,11 +134,22 @@ namespace Car_List
             this.displayButton.UseVisualStyleBackColor = true;
             this.displayButton.Click += new System.EventHandler(this.displayButton_Click);
             // 
+            // exitButton
+            // 
+            this.exitButton.Location = new System.Drawing.Point(600, 366);
+            this.exitButton.Name = "exitButton";
+            this.exitButton.Size = new System.Drawing.Size(75, 23);
+            this.exitButton.TabIndex = 4;
+            this.exitButton.Text = "Zakończ";
+            this.exitButton.UseVisualStyleBackColor = true;
+            this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.exitButton);
             this.Controls.Add(this.displayButton);
             this.Controls.Add(this.carListBox);
             this.Controls.Add(this.addButton);
@@ -162,6 +174,7 @@ namespace Car_List
         private System.Windows.Forms.Button addButton;
         private System.Windows.Forms.ListBox carListBox;
         private System.Windows.Forms.Button displayButton;
+        private System.Windows.Forms.Button exitButton;
     }
 }
 

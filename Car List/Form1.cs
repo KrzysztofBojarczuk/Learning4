@@ -67,5 +67,10 @@ namespace Car_List
                 carListBox.Items.Add(output);
             }
         }
+
+        private void exitButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
